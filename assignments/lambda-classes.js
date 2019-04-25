@@ -9,10 +9,9 @@ class Person {
 
     //Logs a string `Hello my name is ${name}, I am from ${location}`
     speak() {
-
+        console.log(`Hello my name is ${name}, I am from ${location}`);
     }
 }
-
 
 class Instructor extends Person {
     constructor(attr){
@@ -34,8 +33,6 @@ class Instructor extends Person {
 
     }
 }
-
-
 
 class Student extends Person {
     constructor(attr){
@@ -63,15 +60,12 @@ class Student extends Person {
 
 }
 
-
-
 class ProjectManager extends Instructor {
     constructor(attr){
         super(attr);
         this.gradClassName = attr.gradClassName;
         this.favInstructor = attr.favInstructor;
     }
-
     
     // `standUp` a method that takes in a slack channel and logs `{name} announces to {channel}, @channel standy times!​​​​​
     standUp(){
@@ -80,10 +74,8 @@ class ProjectManager extends Instructor {
 
     // `debugsCode` a method that takes in a student object and a subject and logs out `{name} debugs {student.name}'s code on {subject}`
     debugsCode(){
-        
+
     }
-
-
 }
 
 
