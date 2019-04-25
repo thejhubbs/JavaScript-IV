@@ -42,7 +42,7 @@ class GameObject {
 class CharacterStats extends GameObject {
     constructor(attr) {
         super(attr);
-        this.healthPoints = attr.healthPoints;    
+        this.healthPoints = attr.healthPoints;
     }
     takeDamage() {
         return `${this.name} took damage.`
@@ -59,18 +59,19 @@ class CharacterStats extends GameObject {
   * should inherit takeDamage() from CharacterStats
 */
 
-const Humanoid = function (attr) {
-    CharacterStats.call(this, attr);
-    this.team = attr.team;
-    this.weapons = attr.weapons;
-    this.language = attr.language;
+class Humanoid extends CharacterStats {
+    constructor(attr) {
+        super(attr);
+        this.team = attr.team;
+        this.weapons = attr.weapons;
+        this.language = attr.language;
+    }
+    greet() {
+        return `${this.name} offers a greeting in ${this.language}`;
+    }
 
 }
 
-Humanoid.prototype = Object.create(CharacterStats.prototype);
-Humanoid.prototype.greet = function () {
-    return `${this.name} offers a greeting in ${this.language}`;
-}
 
 
 /*
