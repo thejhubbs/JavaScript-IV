@@ -56,7 +56,6 @@ const fred = new Person({
   * **Project Managers** - extensions of Instructors
 * **IMPORTANT** - You'll need to create 2 - 3 objects for each class and test them according to their unique Attributes. For example:
 
-```js
 const fred = new Instructor({
   name: 'Fred',
   location: 'Bedrock',
@@ -73,7 +72,7 @@ const fred = new Instructor({
 * First we need a Person class. This will be our `base-class`
 * Person receives `name` `age` `location` `gender` all as props
 * Person receives `speak` as a method.
-* This method logs out a phrase `Hello my name is Fred, I am from Bedrock` where `name` and `location` are the object's own props
+* This method logs out a phrase  where `name` and `location` are the object's own props
 
 #### Instructor
 
