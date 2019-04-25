@@ -32,6 +32,10 @@ class Instructor extends Person {
     grade(student, subject) {
 
     }
+
+    test(){
+        
+    }
 }
 
 class Student extends Person {
@@ -58,6 +62,10 @@ class Student extends Person {
 
     }
 
+    test(){
+        
+    }
+
 }
 
 class ProjectManager extends Instructor {
@@ -76,6 +84,55 @@ class ProjectManager extends Instructor {
     debugsCode(){
 
     }
+
+    test(){
+
+    }
 }
 
+const jordan = new Student({
+    name: "Jordan",
+    age: 25,
+    location: "Ohio",
+    gender: "M",
+    prevBackground: "Landscaping",
+    className: "WebPT6",
+    favSubjects: ['HTML', "Ruby", "JQuery"]
+});
 
+const bill = new Student({
+    name: "Bill",
+    age: 26,
+    location: "Ohio",
+    gender: "M",
+    prevBackground: "Landscaping",
+    className: "WebPT6",
+    favSubjects: ['HTML', "Ruby", "JQuery"]
+});
+
+const kieran = new Instructor({
+    name: "kieran",
+    age: 28,
+    location: "USA",
+    gender: "M",
+    specialty: "Computers",
+    favLanguage: "HTML",
+    catchPhrase: "Howdy there folks"
+});
+
+const marious = new ProjectManager({
+    name: "marious",
+    age: 28,
+    location: "USA",
+    gender: "M",
+    specialty: "Computers",
+    favLanguage: "HTML",
+    catchPhrase: "Pick your favorite emoji",
+    gradClassName: "Web17",
+    favInstructor: "Knell"
+});
+
+console.log(jordan.test());
+console.log(bill.test());
+console.log(kieran.test());
+console.log(marioius.test());
