@@ -60,17 +60,19 @@ class Student extends Person {
 
     // `listsSubjects` a method that logs out all of the student's favoriteSubjects one by one.
     listSubjects() {
-
+        this.favSubjects.forEach(item, function(){
+            console.log(item);
+        });
     }
 
     // `PRAssignment` a method that receives a subject as an argument and logs out that the `student.name has submitted a PR for {subject}`
     PRAssignment(subject) {
-
+        console.log(`${student.name} has a submitted a PR for ${subject}`);
     }
 
     // `sprintChallenge` similar to PRAssignment but logs out `student.name has begun sprint challenge on {subject}`
     sprintChallenge(subject) {
-
+        console.log(`${student.name} has begun a sprint challenge for ${subject}`);
     }
 
     test() {
