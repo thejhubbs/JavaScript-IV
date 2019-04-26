@@ -112,6 +112,9 @@ class ProjectManager extends Instructor {
             favSubjects: ['HTML', "Ruby", "JQuery"]
         });
         this.speak();
+        
+        this.demo("React");
+        this.grade(bill, "React");
         this.standUp("webpt6_marious");
         this.debugsCode(bill, "React");
     }
