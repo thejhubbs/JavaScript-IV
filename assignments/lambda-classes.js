@@ -60,7 +60,7 @@ class Student extends Person {
 
     // `listsSubjects` a method that logs out all of the student's favoriteSubjects one by one.
     listSubjects() {
-        this.favSubjects.forEach(item, function(){
+        this.favSubjects.forEach(function(item){
             console.log(item);
         });
     }
