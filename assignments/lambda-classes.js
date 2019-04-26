@@ -67,12 +67,12 @@ class Student extends Person {
 
     // `PRAssignment` a method that receives a subject as an argument and logs out that the `student.name has submitted a PR for {subject}`
     PRAssignment(subject) {
-        console.log(`${student.name} has a submitted a PR for ${subject}`);
+        console.log(`${this.name} has a submitted a PR for ${subject}`);
     }
 
     // `sprintChallenge` similar to PRAssignment but logs out `student.name has begun sprint challenge on {subject}`
     sprintChallenge(subject) {
-        console.log(`${student.name} has begun a sprint challenge for ${subject}`);
+        console.log(`${this.name} has begun a sprint challenge for ${subject}`);
     }
 
     test() {
@@ -93,12 +93,12 @@ class ProjectManager extends Instructor {
 
     // `standUp` a method that takes in a slack channel and logs `{name} announces to {channel}, @channel standy times!​​​​​
     standUp(channel) {
-
+        console.log(`${this.name} announces to ${channel}, @channel study times!`);
     }
 
     // `debugsCode` a method that takes in a student object and a subject and logs out `{name} debugs {student.name}'s code on {subject}`
-    debugsCode() {
-
+    debugsCode(student, subject) {
+        console.log(`${this.name} debugs ${student.name}'s code on  ${subject}`);
     }
 
     test() {
