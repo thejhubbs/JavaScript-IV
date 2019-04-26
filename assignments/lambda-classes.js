@@ -9,7 +9,7 @@ class Person {
 
     //Logs a string `Hello my name is ${name}, I am from ${location}`
     speak() {
-        console.log(`Hello my name is ${name}, I am from ${location}`);
+        console.log(`Hello my name is ${this.name}, I am from ${this.location}`);
     }
 }
 
@@ -43,6 +43,7 @@ class Instructor extends Person {
             className: "WebPT6",
             favSubjects: ['HTML', "Ruby", "JQuery"]
         });
+        this.speak();
         this.demo("Javascript");
         this.grade(bill, "Javascript");
     }
@@ -73,6 +74,7 @@ class Student extends Person {
     }
 
     test() {
+        this.speak();
         this.listSubjects();
         this.PRAssignment("HTML");
         this.sprintChallenge("CSS");
@@ -107,6 +109,7 @@ class ProjectManager extends Instructor {
             className: "WebPT6",
             favSubjects: ['HTML', "Ruby", "JQuery"]
         });
+        this.speak();
         this.standUp("webpt6_marious");
         this.debugsCode(bill, "React");
     }
@@ -145,6 +148,6 @@ const marious = new ProjectManager({
     favInstructor: "Knell"
 });
 
-console.log(jordan.test());
-console.log(kieran.test());
-console.log(marious.test());
+jordan.test();
+kieran.test();
+marious.test();
