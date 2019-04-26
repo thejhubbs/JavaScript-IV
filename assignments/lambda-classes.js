@@ -24,13 +24,13 @@ class Instructor extends Person {
     //Input- subject Str
     //Logs "Today we are learning about ${subject}"
     demo(subject) {
-
+        console.log(`Today we are learning about ${subject}`);
     }
 
     //Input- student Obj, subject Str
     //Logs "${student name} recieved a perfect score on ${subject}" 
     grade(student, subject) {
-
+        console.log(`${student.name} recieved a perfect score on ${subject}`);
     }
 
     test() {
