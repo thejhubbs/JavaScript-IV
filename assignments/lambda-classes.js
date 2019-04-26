@@ -1,6 +1,6 @@
 // CODE here for your Lambda Classes
 class Person {
-    constructor(attr){
+    constructor(attr) {
         this.name = attr.name;
         this.age = attr.age;
         this.location = attr.location;
@@ -14,7 +14,7 @@ class Person {
 }
 
 class Instructor extends Person {
-    constructor(attr){
+    constructor(attr) {
         super(attr);
         this.specialty = attr.specialty;
         this.favLanguage = attr.favLanguage;
@@ -25,7 +25,7 @@ class Instructor extends Person {
     //Logs "Today we are learning about ${subject}"
     demo(subject) {
 
-    }  
+    }
 
     //Input- student Obj, subject Str
     //Logs "${student name} recieved a perfect score on ${subject}" 
@@ -33,13 +33,23 @@ class Instructor extends Person {
 
     }
 
-    test(){
-        
+    test() {
+        const bill = new Student({
+            name: "Bill",
+            age: 26,
+            location: "Ohio",
+            gender: "M",
+            prevBackground: "Landscaping",
+            className: "WebPT6",
+            favSubjects: ['HTML', "Ruby", "JQuery"]
+        });
+        this.demo("Javascript");
+        this.grade(bill, "Javascript");
     }
 }
 
 class Student extends Person {
-    constructor(attr){
+    constructor(attr) {
         super(attr);
         this.prevBackgound = attr.prevBackgound;
         this.className = attr.className;
@@ -62,31 +72,43 @@ class Student extends Person {
 
     }
 
-    test(){
-        
+    test() {
+        this.listSubjects();
+        this.PRAssignment("HTML");
+        this.sprintChallenge("CSS");
     }
 
 }
 
 class ProjectManager extends Instructor {
-    constructor(attr){
+    constructor(attr) {
         super(attr);
         this.gradClassName = attr.gradClassName;
         this.favInstructor = attr.favInstructor;
     }
-    
+
     // `standUp` a method that takes in a slack channel and logs `{name} announces to {channel}, @channel standy times!​​​​​
-    standUp(){
+    standUp(channel) {
 
     }
 
     // `debugsCode` a method that takes in a student object and a subject and logs out `{name} debugs {student.name}'s code on {subject}`
-    debugsCode(){
+    debugsCode() {
 
     }
 
-    test(){
-
+    test() {
+        const bill = new Student({
+            name: "Bill",
+            age: 26,
+            location: "Ohio",
+            gender: "M",
+            prevBackground: "Landscaping",
+            className: "WebPT6",
+            favSubjects: ['HTML', "Ruby", "JQuery"]
+        });
+        this.standUp("webpt6_marious");
+        this.debugsCode(bill, "React");
     }
 }
 
@@ -100,15 +122,6 @@ const jordan = new Student({
     favSubjects: ['HTML', "Ruby", "JQuery"]
 });
 
-const bill = new Student({
-    name: "Bill",
-    age: 26,
-    location: "Ohio",
-    gender: "M",
-    prevBackground: "Landscaping",
-    className: "WebPT6",
-    favSubjects: ['HTML', "Ruby", "JQuery"]
-});
 
 const kieran = new Instructor({
     name: "kieran",
@@ -133,6 +146,5 @@ const marious = new ProjectManager({
 });
 
 console.log(jordan.test());
-console.log(bill.test());
 console.log(kieran.test());
-console.log(marioius.test());
+console.log(marious.test());
